@@ -11,26 +11,6 @@ var bcrypt = require('bcrypt-nodejs');
 var bodyParser = require('body-parser');
 
 module.exports = db;
-///////////////////////////
-//Helper Funcs
-//////////////////////////
-// db.createIfDoesntExist = function(nodeType,properties,callback){
-//   var params = {
-//     nodeType: nodeType
-//   };
-//   for (var i in properties){
-//     params[i] = properties[i]
-//   }
-//   db.query("MERGE (n:({nodeType}) {({}) } )",params,function(err,result){
-//     if(err){
-//       callback(err)
-//     } else {
-//       callback();
-//     }
-//   })
-// }
-
-//How to delete everything in the database: db.query("match (n) optional match (n)-[r]-() delete n, r",function(){})
 
 var getAllBeerQuery = "MATCH (n:Beer) RETURN n;";
 
